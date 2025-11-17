@@ -5,10 +5,11 @@ import com.example.demo.model.enums.Rol;
 
 import java.util.List;
 
-    public interface PerfilRegistroService {
-        List<PerfilRegistro> getAll();
-        PerfilRegistro getById(String telefono);
-        PerfilRegistro save(PerfilRegistro perfilRegistro);
-        void delete(String telefono);
-        Rol getRolByTelefono(String telefono);
-    }
+public interface PerfilRegistroService {
+    List<PerfilRegistro> getAll();
+    PerfilRegistro getById(String telefono);
+    PerfilRegistro getByTelefono(String telefono);
+    PerfilRegistro save(PerfilRegistro perfilRegistro);
+    void delete(String telefono);
+    Rol getRolByTelefono(String telefono);
+}

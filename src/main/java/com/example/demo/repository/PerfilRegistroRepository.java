@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PerfilRegistroRepository extends JpaRepository<PerfilRegistro, String> {
+    PerfilRegistro findByTelefono(String telefono);
 }

@@ -29,6 +29,12 @@ public class PerfilRegistroServiceImpl implements PerfilRegistroService {
     }
 
     @Override
+    public PerfilRegistro getByTelefono(String telefono) {
+
+        return perfilRegistroRepository.findById(telefono).orElse(null);
+    }
+
+    @Override
     public PerfilRegistro save(PerfilRegistro perfilRegistro) {
         return perfilRegistroRepository.save(perfilRegistro);
     }
@@ -40,7 +46,7 @@ public class PerfilRegistroServiceImpl implements PerfilRegistroService {
 
     @Override
     public Rol getRolByTelefono(String telefono) {
-        PerfilRegistro perfil = getById(telefono);
+        PerfilRegistro perfil = getByTelefono(telefono);
         if (perfil == null) return null;
 
         Trabajadores trabajadores = trabajadorRepository.findById(perfil.getCodigo()).orElse(null);
