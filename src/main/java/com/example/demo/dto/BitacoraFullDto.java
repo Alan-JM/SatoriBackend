@@ -35,6 +35,9 @@ public class BitacoraFullDto {
     private String destino;
     private Date fecha;
     private String telefonoPerfilRegistro;
+    private String nombreOperador;
+    private String unidadEco;
+    private List<String> nombresAyudantes;
 
     // Ayudantes
     private List<Integer> idAyudantes;

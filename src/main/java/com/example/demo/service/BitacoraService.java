@@ -8,4 +8,6 @@ public interface BitacoraService {
     Bitacora getById(Integer id);
     Bitacora save(Bitacora bitacora);
     void delete(Integer id);
+
+
 }
